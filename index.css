@@ -1,0 +1,89 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+#generate-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#generate-btn:hover {
+  background-color: #2980b9;
+}
+
+#generate-btn:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.loader {
+  border: 5px solid #e0e0e0; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+  margin: 20px auto;
+  display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#output {
+  text-align: left;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start; /* Align content to the top on mobile */
+  }
+
+  main {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  #output {
+    padding: 1rem; /* Reduce padding for the output area */
+  }
+}
